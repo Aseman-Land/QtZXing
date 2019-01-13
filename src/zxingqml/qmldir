@@ -1,0 +1,4 @@
+module QZXing
+classname QZXingQmlPlugin
+typeinfo plugins.qmltypes
+plugin declarative_qzxingqml
