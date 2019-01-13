@@ -1,0 +1,73 @@
+Source: qtzxing
+Priority: optional
+Maintainer: Aseman Team <contact@aseman.co>
+Build-Depends: 
+ debhelper (>= 8.0.0),
+ g++ (>= 4:4.7),
+ gcc (>= 4:4.7),
+ qtbase5-dev (>= 5.2.0),
+ libqt5sql5-sqlite (>= 5.2.0),
+ libqt5multimediaquick-p5 (>= 5.2.0),
+ libqt5multimedia5-plugins (>= 5.2.0),
+ libqt5multimedia5 (>= 5.2.0),
+ qtchooser,
+ qt5-qmake,
+ qt5-default,
+ libqt5qml5 (>= 5.2.0),
+ libqt5qml-graphicaleffects (>= 5.2.0) | qml-module-qtgraphicaleffects,
+ qtdeclarative5-controls-plugin (>= 5.2.0) | qml-module-qtquick-controls,
+ qtdeclarative5-dev (>= 5.2.0),
+ libqt5quick5 (>= 5.2.0),
+ qtmultimedia5-dev (>= 5.2.0),
+ libqt5webkit5-dev (>= 5.1.0),
+ libssl-dev
+Standards-Version: 3.9.4
+Section: libs
+Homepage: https://github.com/Aseman-Land/QtZXing
+Vcs-Browser: https://github.com/Aseman-Land/QtZXing
+
+Package: libqt5zxing
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Qt/QML wrapper library for the ZXing barcode image processing library.
+ Supports barcode decoding for the following types:
+ UPC-A UPC-E EAN-8 EAN-13 ITF Code 39 Code 93 Code 128 (GS1) Codabar
+ QR Code Data Matrix Aztec (beta) PDF 417
+
+Package: libqt5zxing-dev
+Section: libdevel
+Architecture: any
+Depends: libqt5zxing (= ${binary:Version})
+Description: Qt/QML wrapper library for the ZXing barcode image processing library.
+ Supports barcode decoding for the following types:
+ UPC-A UPC-E EAN-8 EAN-13 ITF Code 39 Code 93 Code 128 (GS1) Codabar
+ QR Code Data Matrix Aztec (beta) PDF 417
+
+Package: qml-module-zxingqml
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Qt/QML wrapper library for the ZXing barcode image processing library.
+ Supports barcode decoding for the following types:
+ UPC-A UPC-E EAN-8 EAN-13 ITF Code 39 Code 93 Code 128 (GS1) Codabar
+ QR Code Data Matrix Aztec (beta) PDF 417
+
+Package: qt5zxing
+Section: libs
+Architecture: any
+Depends: libqt5zxing (= ${binary:Version}),
+ qml-module-zxingqml
+Description: Qt/QML wrapper library for the ZXing barcode image processing library.
+ Supports barcode decoding for the following types:
+ UPC-A UPC-E EAN-8 EAN-13 ITF Code 39 Code 93 Code 128 (GS1) Codabar
+ QR Code Data Matrix Aztec (beta) PDF 417
+
+Package: qt5zxing-dev
+Section: libdevel
+Architecture: any
+Depends: libqt5zxing-dev (= ${binary:Version})
+Description: Qt/QML wrapper library for the ZXing barcode image processing library.
+ Supports barcode decoding for the following types:
+ UPC-A UPC-E EAN-8 EAN-13 ITF Code 39 Code 93 Code 128 (GS1) Codabar
+ QR Code Data Matrix Aztec (beta) PDF 417

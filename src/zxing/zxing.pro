@@ -6,16 +6,19 @@ DEPENDPATH += $$PWD
 TARGET = QtZXing
 
 MODULE = zxing
-MODULE_PRI = ../../modules/qt_zxing.pri
 
 load(qt_module)
 
 CONFIG += exceptions c++11
 CONFIG += qzxing_qml qzxing_multimedia
 
+TEMP_INSTALLS = $$INSTALLS
+TARGET_PATH = $$target.path
 include(../../qzxing/src/QZXing.pri)
-DEFINES -= DISABLE_LIBRARY_FEATURES
+target.path = $$TARGET_PATH
+INSTALLS = $$TEMP_INSTALLS
 
+DEFINES -= DISABLE_LIBRARY_FEATURES
 
 !contains(CONFIG, no_install) {
     QZXING_HEADERS = $$files($$PWD/../../qzxing/src/*.h)

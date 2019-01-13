@@ -1,5 +1,0 @@
-#ifndef QT_QTZXING_MODULE_H
-#define QT_QTZXING_MODULE_H
-#include <QtZXing/QtZXingDepends>
-#include "qtzxingversion.h"
-#endif

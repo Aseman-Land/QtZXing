@@ -1,0 +1,4 @@
+usr/lib/*-linux-gnu/libQt5ZXing*
+usr/lib/*-linux-gnu/cmake/Qt5ZXing/*
+usr/lib/*-linux-gnu/pkgconfig/Qt5ZXing.pc
+usr/lib/*-linux-gnu/qt5/mkspecs/modules/qt_lib_zxing*
